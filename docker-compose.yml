@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - '27017:27017'
+
+  admin-auth:
+    build: ./admin-auth
+    ports:
+      - '3001:3001'
+    env_file:
+      - ./admin-auth/.env
+    depends_on:
+      - mongo
+
+  hotels-api:
+    build: ./hotels-api
+    ports:
+      - '3002:3002'
+    env_file:
+      - ./hotels-api/.env
+    depends_on:
+      - mongo
+
+  cabs-api:
+    build: ./cabs-api
+    ports:
+      - '3003:3003'
+    env_file:
+      - ./cabs-api/.env 
+    depends_on:
+      - mongo
+
+  grievance-api:
+    build: ./grievance-api
+    ports:
+      - '3004:3004'
+    env_file:
+      - ./grievance-api/.env
+    depends_on:
+      - mongo
