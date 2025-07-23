@@ -93,6 +93,7 @@ Pull requests and suggestions are welcome!
 ---
 
 ## 🙋‍♂️ Author
+**Tejas Venugopalan** 
 
 **Tatuskar Jaiwanth**  
 GitHub: [@tatuskarjaiwanth](https://github.com/tatuskarjaiwanth)
